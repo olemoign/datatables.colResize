@@ -582,8 +582,8 @@
   // Register a new feature with DataTables
   if (
     typeof $.fn.dataTable === 'function' &&
-    typeof $.fn.dataTableExt.fnVersionCheck === 'function' &&
-    $.fn.dataTableExt.fnVersionCheck('1.10.8')
+    typeof $.fn.dataTable.versionCheck === 'function' &&
+    $.fn.dataTable.versionCheck('1.10.8')
   ) {
     $.fn.dataTableExt.aoFeatures.push({
       fnInit: function (settings) {
