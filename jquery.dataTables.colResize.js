@@ -52,8 +52,6 @@
     return resultObject;
   }
 
-  const DataTable = $.fn.dataTable;
-
   /**
    * ColResize provides column resizable control for DataTables
    * @class ColResize
@@ -616,7 +614,7 @@
     }
 
     const init = settings.oInit.colResize;
-    const defaults = DataTable.defaults.colResize;
+    const defaults = $.fn.dataTable.defaults.colResize;
 
     if (init || defaults) {
       const opts = $.extend({}, init, defaults);
