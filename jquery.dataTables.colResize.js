@@ -302,7 +302,10 @@
       }
     },
     _fnGetAllColumns: function () {
-      return this.s.dt.aoColumns;
+      return this.s.dt.aoColumns.map((col) => {
+        col.nTh = this.s.dt.api.columns(col.idx).header();
+        return col;
+      });
     },
     _fnGetBodyScroll: function () {
       return $(this.s.dt.nScrollBody);
